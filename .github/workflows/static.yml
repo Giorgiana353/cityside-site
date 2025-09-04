@@ -21,11 +21,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Node + Yarn Berry
-      - name: Setup Node.js
+      - name: Setup Node.js (LTS)
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
           cache: yarn
           cache-dependency-path: '**/yarn.lock'
 
@@ -33,16 +32,25 @@ jobs:
         run: |
           corepack enable
           corepack prepare yarn@stable --activate
-          yarn -v
           node -v
+          yarn -v
 
-      - name: Install dependencies (Yarn Berry)
-        run: yarn install --immutable
+      # Atenție: fără --immutable, ca să nu pice pe mici nepotriviri de lock
+      - name: Install dependencies
+        run: yarn install
 
-      - name: Build project (Vite)
+      # Debug înainte de build
+      - name: List files before build
+        run: |
+          pwd
+          ls -la
+          echo "Has package.json:"
+          cat package.json | head -n 40
+
+      - name: Build (Vite)
         run: yarn build
 
-      # Debug: vezi ce s-a generat și dă fail clar dacă dist/ nu există
+      # Debug după build: dacă nu există dist/, vedem clar
       - name: Check build output
         run: |
           echo "Root files:" && ls -la
