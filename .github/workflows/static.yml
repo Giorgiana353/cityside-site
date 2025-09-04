@@ -2,7 +2,7 @@ name: Deploy static content to Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -21,24 +21,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js (LTS)
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: yarn
-          cache-dependency-path: '**/yarn.lock'
+          node-version: 20
+          cache: 'yarn'
 
-      - name: Enable Corepack and Yarn 4.5.1
+      - name: Enable Corepack & activate Yarn 4.5.1
         run: |
           corepack enable
           corepack prepare yarn@4.5.1 --activate
           yarn -v
+          node -v
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Install deps
+        run: yarn install --immutable
 
-      - name: Build (Vite)
+      - name: Build
         run: yarn build
+
+      # SPA fallback – ca refresh pe /rute să nu dea 404
+      - name: Add SPA fallback (404.html)
+        run: cp dist/index.html dist/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
