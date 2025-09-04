@@ -1,13 +1,15 @@
+// vite.config.js
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 
 export default defineConfig({
-  base: "/cityside-site/",
   plugins: [vue()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"), // Configurare alias pentru "@"
+      "@": path.resolve(__dirname, "./src"),
     },
   },
+  // IMPORTANT: baza pentru GitHub Pages (numele repo-ului)
+  base: "/cityside-site/",
 });
