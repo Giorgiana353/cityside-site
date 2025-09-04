@@ -28,34 +28,17 @@ jobs:
           cache: yarn
           cache-dependency-path: '**/yarn.lock'
 
-      - name: Enable Corepack (Yarn Berry)
+      - name: Enable Corepack and Yarn 4.5.1
         run: |
           corepack enable
-          corepack prepare yarn@stable --activate
-          node -v
+          corepack prepare yarn@4.5.1 --activate
           yarn -v
 
-      # Atenție: fără --immutable, ca să nu pice pe mici nepotriviri de lock
       - name: Install dependencies
         run: yarn install
 
-      # Debug înainte de build
-      - name: List files before build
-        run: |
-          pwd
-          ls -la
-          echo "Has package.json:"
-          cat package.json | head -n 40
-
       - name: Build (Vite)
         run: yarn build
-
-      # Debug după build: dacă nu există dist/, vedem clar
-      - name: Check build output
-        run: |
-          echo "Root files:" && ls -la
-          echo "dist/ files:" && ls -la dist
-        shell: bash
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
