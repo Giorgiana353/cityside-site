@@ -1,4 +1,3 @@
-# .github/workflows/static.yml
 name: Deploy static content to Pages
 
 on:
@@ -22,20 +21,33 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Node + Yarn Berry
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'yarn'
+          cache: yarn
+          cache-dependency-path: '**/yarn.lock'
 
       - name: Enable Corepack (Yarn Berry)
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare yarn@stable --activate
+          yarn -v
+          node -v
 
-      - name: Install dependencies
+      - name: Install dependencies (Yarn Berry)
         run: yarn install --immutable
 
-      - name: Build project
+      - name: Build project (Vite)
         run: yarn build
+
+      # Debug: vezi ce s-a generat și dă fail clar dacă dist/ nu există
+      - name: Check build output
+        run: |
+          echo "Root files:" && ls -la
+          echo "dist/ files:" && ls -la dist
+        shell: bash
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
