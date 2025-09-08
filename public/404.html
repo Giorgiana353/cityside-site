@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirect…</title>
+    <meta http-equiv="refresh" content="0; url=./" />
+    <script>
+      // Redirecționează către index.html păstrând path-ul pentru SPA
+      (function () {
+        var l = window.location;
+        // scoate prefixul repo-ului din path (dacă e necesar)
+        var repo = "/cityside-site";
+        var path = l.pathname.startsWith(repo) ? l.pathname.slice(repo.length) : l.pathname;
+        sessionStorage.redirect = path + l.search + l.hash;
+        window.location.replace(repo + "/");
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
