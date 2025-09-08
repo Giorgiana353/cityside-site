@@ -47,31 +47,40 @@
             </div>
           </article>
 
-          <!-- OSNABRÜCK -->
+          <!-- Schimb de experienta -->
           <article id="osnabruck" ref="sections" class="rounded-xl bg-white border border-slate-200 shadow-sm overflow-hidden" v-inview>
             <div class="block">
-              <img src="" alt="Osnabrück" class="w-full h-64 object-cover"/>
+              <img src="/imagini/proiecte/Osnabruck.jpg" alt="Osnabrück" class="w-full h-64 object-cover"/>
               <header class="flex items-center gap-4 px-6 py-5 border-b border-slate-100">
                 <span class="w-10 h-10 rounded-lg bg-[#191970] text-white grid place-items-center text-sm font-bold">2</span>
-                <h2 class="text-xl lg:text-2xl font-extrabold text-slate-900">OSNABRÜCK</h2>
+                <h2 class="text-xl lg:text-2xl font-extrabold text-slate-900">Schimb de experiență Germania</h2>
               </header>
               <div class="px-6 py-5 space-y-4 prose prose-slate max-w-none">
                 <p>
-                  Moștenirea de secole, ca și națiune înrobită, se regăsește încă în cultura, mentalitatea, spiritul și situația țării noastre. Din păcate, ﬁecare generație de tineri români va continua să se confrunte cu aceeași cultură dacă aceasta nu este schimbată. Asociația Cityside Education își asumă provocarea de a contribui la această schimbare a culturii crezând cu tărie că viitorul României depinde de educaţia celor care o formează, a generației de mâine și de aceea face tot posibilul ca studenții săi să ﬁe foarte bine echipați și pregătiți pentru a putea schimba fața și soarta României.  
+                  Moștenirea de secole, ca și națiune înrobită, se regăsește încă în cultura,
+mentalitatea, spiritul și situația țării noastre. Din păcate, ﬁecare generație de tineri
+români va continua să se confrunte cu aceeași cultură dacă aceasta nu este
+schimbată. Asociația Cityside Education își asumă provocarea de a contribui la
+această schimbare a culturii crezând cu tărie că viitorul României depinde de
+educaţia celor care o formează, a generației de mâine și de aceea face tot posibilul
+ca studenții săi să ﬁe foarte bine echipați și pregătiți pentru a putea schimba fața și
+soarta României..  
                 </p>
                 <p>
-                  Universitatea Emanuel din Oradea participă anual la un schimb de experiență și interacțiune cu reprezentanți ai 11 societăți civile din Osnabrück, Germania, la invitația domnului Wolfgang Schenk. În acest proiect de studiu al culturii antreprenorial-sociale germane în cadrul organizațiilor non-profit din Osnabrück vor fi implicați studenți de la Facultatea de Management Griffiths a Universității Emanuel din Oradea, care vor ﬁ expuşi la practici profesionale din cadrul unor ONG-uri de succes din Germania recunoscute pentru calitatea serviciilor și soluțiile inovatoare pe care le dezvoltă în rezolvarea problemelor sociale. Acest schimb de experiență este o oportunitate unică pentru reprezentanții României de mâine pentru a asimila practici eﬁciente pe care să le implementeze în organizaţiile din România, în care sunt sau vor ﬁ implicați.
+                  Universitatea Emanuel din Oradea participă anual la un schimb de experiență și interacțiune cu reprezentanți ai societății civile și companii din Germania (zona Osnabruck, Hanover, Bielefeld, Bremen), în cadrul unui proiect condus de dr. Silvia Fotea la invitația domnului Wolfgang Schenk. În acest proiect de studiu al culturii antreprenorial-sociale germane în cadrul companiilor și organizațiilor non-profit sunt
+implicați studenți de la Facultatea de Management Griffiths a Universității Emanuel
+din Oradea, care sunt expuşi la practici profesionale din cadrul unor organizații de
+succes din Germania recunoscute pentru calitatea serviciilor și soluțiile inovatoare
+pe care le dezvoltă. Acest schimb de experiență este o oportunitate unică pentru
+reprezentanții României de mâine pentru a asimila practici eﬁciente pe care să le
+implementeze în organizaţiile din România, în care sunt sau vor ﬁ implicați.
                 </p>
                 <p class="font-semibold">Beneﬁciile proiectului:</p>
                 <ul class="list-disc pl-6">
-                  <li>Expunerea și asimilarea de bune practici din societatea civilă germană;</li>
+                  <li>Expunerea și asimilarea de bune practici din societatea civilă și de business germană;</li>
                   <li>Networking și crearea de contacte în spațiul german;</li>
                   <li>Interacțiune și schimb intercultural.</li>
                 </ul>
-                <p class="font-semibold">Scopul proiectului:</p>
-                <p>
-                  Studierea culturii antreprenorial-sociale germane prin vizita studenților în cadrul organizațiilor non-profit din Osnabrück, Germania.
-                </p>
               </div>
             </div>
           </article>

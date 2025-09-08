@@ -76,7 +76,7 @@
           <!-- 3. Misiunea Countryside -->
           <article id="countryside" ref="sections" class="rounded-xl bg-white border border-slate-200 shadow-sm overflow-hidden" v-inview>
             <div class="block">
-              <img src="" alt="Misiunea Countryside" class="w-full h-64 object-cover"/>
+              <img src="/imagini/proiecte/Countryside.jpg" alt="Misiunea Countryside" class="w-full h-64 object-cover"/>
               <header class="flex items-center gap-4 px-6 py-5 border-b border-slate-100">
                 <span class="w-10 h-10 rounded-lg bg-[#191970] text-white grid place-items-center text-sm font-bold">3</span>
                 <h2 class="text-xl lg:text-2xl font-extrabold text-slate-900">MISIUNEA COUNTRYSIDE</h2>
