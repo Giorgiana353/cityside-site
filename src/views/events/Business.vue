@@ -46,7 +46,7 @@
 
           <!-- Business Days -->
           <article id="business-days" ref="sections" class="rounded-xl bg-white border border-slate-200 shadow-sm overflow-hidden" v-inview>
-            <RouterLink to="/evenimente/business-days" class="block">
+            <RouterLink to="/evenimente/business-day" class="block">
               <img src="" alt="Business Days" class="w-full h-64 object-cover"/>
               <header class="flex items-center gap-4 px-6 py-5 border-b border-slate-100">
                 <span class="w-10 h-10 rounded-lg bg-[#191970] text-white grid place-items-center text-sm font-bold">2</span>

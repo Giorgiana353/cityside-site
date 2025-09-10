@@ -16,95 +16,119 @@
           <RouterLink to="/evenimente" class="h-11 px-6 rounded-full border border-slate-300 text-slate-700 font-semibold inline-flex items-center justify-center hover:bg-slate-50 transition">Evenimente</RouterLink>
         </div>
 
-    <!-- media card -->
-    <div class="relative mt-14">
-      <div class="max-w-5xl mx-auto rounded-2xl border border-slate-200 overflow-hidden shadow-xl">
-        <img src="" alt="Comunitate Cityside" class="w-full h-[360px] object-cover"/>
+        <!-- media card -->
+        <div class="relative mt-14">
+          <div class="max-w-5xl mx-auto rounded-2xl border border-slate-200 overflow-hidden shadow-xl">
+            <img src="" alt="Comunitate Cityside" class="w-full h-[360px] object-cover"/>
+          </div>
+          <div class="absolute inset-x-0 -bottom-8 max-w-3xl mx-auto grid grid-cols-3 gap-4">
+            <div class="rounded-xl bg-white border border-slate-200 p-4 shadow-sm">
+              <p class="text-xs text-slate-500">Ani de activitate</p>
+              <p class="text-2xl font-extrabold text-[#191970]">15+</p>
+            </div>
+            <div class="rounded-xl bg-white border border-slate-200 p-4 shadow-sm">
+              <p class="text-xs text-slate-500">Proiecte derulate</p>
+              <p class="text-2xl font-extrabold text-[#191970]">100+</p>
+            </div>
+            <div class="rounded-xl bg-white border border-slate-200 p-4 shadow-sm">
+              <p class="text-xs text-slate-500">Studenți & tineri</p>
+              <p class="text-2xl font-extrabold text-[#191970]">1.000+</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="absolute inset-x-0 -bottom-8 max-w-3xl mx-auto grid grid-cols-3 gap-4">
-        <div class="rounded-xl bg-white border border-slate-200 p-4 shadow-sm">
-          <p class="text-xs text-slate-500">Ani de activitate</p>
-          <p class="text-2xl font-extrabold text-[#191970]">15+</p>
-        </div>
-        <div class="rounded-xl bg-white border border-slate-200 p-4 shadow-sm">
-          <p class="text-xs text-slate-500">Proiecte derulate</p>
-          <p class="text-2xl font-extrabold text-[#191970]">100+</p>
-        </div>
-        <div class="rounded-xl bg-white border border-slate-200 p-4 shadow-sm">
-          <p class="text-xs text-slate-500">Studenți & tineri</p>
-          <p class="text-2xl font-extrabold text-[#191970]">1.000+</p>
+    </section>
+
+    <!-- MISIUNE / VALORI -->
+    <section class="relative bg-slate-50 pt-16 pb-8 lg:pt-24 lg:pb-14">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+          <ol class="relative border-s border-slate-200">
+            <li v-for="(f, i) in features" :key="f.title" class="relative pl-10 py-8 group" v-inview>
+              <span class="absolute -left-[11px] top-8 w-6 h-6 rounded-full grid place-items-center bg-white border border-slate-300 shadow-sm text-[#191970]">
+                <component :is="f.icon" class="w-3.5 h-3.5"/>
+              </span>
+              <h3 class="text-xl font-bold text-slate-900">{{ f.title }}</h3>
+              <p class="mt-2 text-slate-600">{{ f.desc }}</p>
+              <div class="mt-4 h-1 w-16 bg-[#191970]/20 rounded-full group-hover:w-24 transition-all"></div>
+            </li>
+          </ol>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- MISIUNE / VALORI (listă timeline) -->
-<section class="relative bg-slate-50 pt-16 pb-8 lg:pt-24 lg:pb-14">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="max-w-3xl mx-auto">
-      <ol class="relative border-s border-slate-200">
-        <li v-for="(f, i) in features" :key="f.title" class="relative pl-10 py-8 group" v-inview>
-          <span class="absolute -left-[11px] top-8 w-6 h-6 rounded-full grid place-items-center bg-white border border-slate-300 shadow-sm text-[#191970]">
-            <component :is="f.icon" class="w-3.5 h-3.5"/>
-          </span>
-          <h3 class="text-xl font-bold text-slate-900">{{ f.title }}</h3>
-          <p class="mt-2 text-slate-600">{{ f.desc }}</p>
-          <div class="mt-4 h-1 w-16 bg-[#191970]/20 rounded-full group-hover:w-24 transition-all"></div>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
+    <!-- ECHIPA -->
+    <section class="bg-white py-16 lg:py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl lg:text-5xl font-extrabold text-slate-800 text-center">ECHIPA</h2>
+        <p class="text-center text-slate-500 mt-3">Oameni dedicați educației și cercetării</p>
 
-<!-- ECHIPA -->
-<section class="bg-white py-16 lg:py-24">
-<div class="max-w-6xl mx-auto px-6">
-<h2 class="text-3xl lg:text-5xl font-extrabold text-slate-800 text-center">ECHIPA</h2>
-<p class="text-center text-slate-500 mt-3">Oameni dedicați educației și cercetării</p>
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Fiecare membru scris manual -->
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative" v-inview>
+            <img src="/imagini/echipa/sebastian-vaduva.jpeg" alt="Dr. Sebastian Văduva MBA" class="w-full h-full object-cover group-hover:scale-105 transition"/>
+            <div class="absolute inset-0 flex flex-col justify-end translate-y-full group-hover:translate-y-0 transition bg-gradient-to-t from-black/70 to-transparent p-4">
+              <h3 class="text-lg font-bold text-white">Dr. Sebastian Văduva MBA</h3>
+              <p class="text-slate-200">Membru fondator | Președinte</p>
+            </div>
+          </article>
 
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative" v-inview>
+            <img src="/imagini/echipa/ioan-fotea.jpeg" alt="Dr. Ioan Fotea" class="w-full h-full object-cover group-hover:scale-105 transition"/>
+            <div class="absolute inset-0 flex flex-col justify-end translate-y-full group-hover:translate-y-0 transition bg-gradient-to-t from-black/70 to-transparent p-4">
+              <h3 class="text-lg font-bold text-white">Dr. Ioan Fotea</h3>
+              <p class="text-slate-200">Membru fondator | Coordonator proiect</p>
+            </div>
+          </article>
 
-<div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-<article v-for="m in team" :key="m.name" class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative" v-inview>
-<img :src="m.photo" :alt="m.name" class="w-full h-full object-cover group-hover:scale-105 transition"/>
-<div class="absolute inset-0 flex flex-col justify-end translate-y-full group-hover:translate-y-0 transition bg-gradient-to-t from-black/70 to-transparent p-4">
-<div class="flex gap-2 mb-3">
-<a v-if="m.email" :href="`mailto:${m.email}`" class="w-9 h-9 rounded-full bg-white/10 border border-white/30 text-white grid place-items-center hover:bg-white hover:text-[#191970]">
-<svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M12 13 2 6.76V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6.76L12 13Zm10-8H2l10 6 10-6Z"/></svg>
-</a>
-<a v-if="m.linkedin" :href="m.linkedin" target="_blank" class="w-9 h-9 rounded-full bg-white/10 border border-white/30 text-white grid place-items-center hover:bg-white hover:text-[#191970]">
-<svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.329-.026-3.039-1.852-3.039-1.853 0-2.136 1.447-2.136 2.943v5.665H9.351V9h3.414v1.561h.049c.476-.901 1.637-1.852 3.37-1.852 3.604 0 4.268 2.372 4.268 5.457v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125ZM6.99 20.452H3.68V9h3.31v11.452Z"/></svg>
-</a>
-</div>
-<div>
-<h3 class="text-lg font-bold text-white">{{ m.name }}</h3>
-<p class="text-slate-200">{{ m.role }}</p>
-</div>
-</div>
-</article>
-</div>
-</div>
-</section>
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative" v-inview>
+            <img src="/imagini/echipa/emanuel-tundrea.jpeg" alt="Dr. Emanuel Țundrea" class="w-full h-full object-cover group-hover:scale-105 transition"/>
+            <div class="absolute inset-0 flex flex-col justify-end translate-y-full group-hover:translate-y-0 transition bg-gradient-to-t from-black/70 to-transparent p-4">
+              <h3 class="text-lg font-bold text-white">Dr. Emanuel Țundrea</h3>
+              <p class="text-slate-200">Membru fondator | Coordonator proiect</p>
+            </div>
+          </article>
 
-<!-- PARTENERI-->
-<section class="max-w-6xl mx-auto px-6 py-14">
-  <h2 class="text-3xl lg:text-5xl font-extrabold text-slate-800 text-center">PARTENERI</h2>
-  <div class="mt-10 relative">
-    <div class="overflow-hidden group">
-      <ul class="flex gap-16 animate-marquee [--duration:35s] group-hover:[animation-play-state:paused]">
-        <li
-          v-for="(p, idx) in partnersDoubled"
-          :key="idx"
-          class="shrink-0 opacity-80 hover:opacity-100 transition"
-        >
-          <img :src="p.logo" :alt="p.name" class="h-14 md:h-20 object-contain" />
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative" v-inview>
+            <img src="/imagini/echipa/silvia-fotea.jpeg" alt="Dr. Silvia Fotea" class="w-full h-full object-cover group-hover:scale-105 transition"/>
+            <div class="absolute inset-0 flex flex-col justify-end translate-y-full group-hover:translate-y-0 transition bg-gradient-to-t from-black/70 to-transparent p-4">
+              <h3 class="text-lg font-bold text-white">Dr. Silvia Fotea</h3>
+              <p class="text-slate-200">Coordonator proiect</p>
+            </div>
+          </article>
 
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative" v-inview>
+            <img src="/imagini/echipa/miriam-pacurar.jpeg" alt="Miriam Păcurar" class="w-full h-full object-cover group-hover:scale-105 transition"/>
+            <div class="absolute inset-0 flex flex-col justify-end translate-y-full group-hover:translate-y-0 transition bg-gradient-to-t from-black/70 to-transparent p-4">
+              <h3 class="text-lg font-bold text-white">Miriam Păcurar</h3>
+              <p class="text-slate-200">Marketing assistant</p>
+            </div>
+          </article>
 
+          <article class="group rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative" v-inview>
+            <img src="/imagini/echipa/melisa-benchis.jpeg" alt="Melisa Benchiș" class="w-full h-full object-cover group-hover:scale-105 transition"/>
+            <div class="absolute inset-0 flex flex-col justify-end translate-y-full group-hover:translate-y-0 transition bg-gradient-to-t from-black/70 to-transparent p-4">
+              <h3 class="text-lg font-bold text-white">Melisa Benchiș</h3>
+              <p class="text-slate-200">Writing assistant</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTENERI -->
+    <section class="max-w-6xl mx-auto px-6 py-14">
+      <h2 class="text-3xl lg:text-5xl font-extrabold text-slate-800 text-center">PARTENERI</h2>
+      <div class="mt-10 relative">
+        <div class="overflow-hidden group">
+          <ul class="flex gap-16 animate-marquee [--duration:35s] group-hover:[animation-play-state:paused]">
+            <li v-for="(p, idx) in partnersDoubled" :key="idx" class="shrink-0 opacity-80 hover:opacity-100 transition">
+              <img :src="p.logo" :alt="p.name" class="h-14 md:h-20 object-contain" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -117,14 +141,6 @@ export default {
         { title: 'Misiune', desc: 'Investim în oameni și contribuim la dezvoltarea și informarea generației tinere prin educație și mentorare.', icon: 'IconTarget' },
         { title: 'Impact', desc: 'Proiecte de cercetare, conferințe și evenimente care dezvoltă abilități și creează oportunități reale.', icon: 'IconGrowth' },
         { title: 'Valori', desc: 'Etică, excelență și colaborare – principiile care ne ghidează fiecare inițiativă.', icon: 'IconCompass' },
-      ],
-      team: [
-        { name: 'Dr. Sebastian Văduva MBA', role: 'Membru fondator | Președinte', photo: '/imagini/echipa/sebastian-vaduva.jpeg', email: 'sebastian@cityside.ro', linkedin: '#' },
-        { name: 'Dr. Ioan Fotea', role: 'Membru fondator | Coordonator proiect', photo: '/imagini/echipa/ioan-fotea.jpeg', email: 'ioan@cityside.ro', linkedin: '#' },
-        { name: 'Dr. Emanuel Țundrea', role: 'Membru fondator | Coordonator proiect', photo: '/imagini/echipa/emanuel-tundrea.jpeg', email: 'emanuel@cityside.ro', linkedin: '#' },
-        { name: 'Dr. Silvia Fotea', role: 'Coordonator proiect', photo: '/imagini/echipa/silvia-fotea.jpeg', email: 'silvia@cityside.ro', linkedin: '#' },
-        { name: 'Miriam Păcurar', role: 'Marketing assistant', photo: '/imagini/echipa/miriam-pacurar.jpeg', email: 'miriam@cityside.ro', linkedin: '#' },
-        { name: 'Melisa Benchiș', role: 'Writing assistant', photo: '/imagini/echipa/melisa-benchis.jpeg', email: 'melisa@cityside.ro', linkedin: '#' },
       ],
       partners: [
         { name: 'INBAM', logo: '/imagini/parteneri/INBAM.jpg' },
@@ -170,7 +186,6 @@ export default {
 </script>
 
 <style scoped>
-
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .animate-marquee { animation: marquee var(--duration, 28s) linear infinite; width: max-content; }
 

@@ -14,6 +14,8 @@ const Donate = () => import('../views/Donate.vue')
 const Academic = () => import('../views/Academic.vue')
 const Search = () => import('../views/Search.vue')
 const NotFound = () => import('../views/NotFound.vue')
+const GSMAC = () => import('../views/GSMAC.vue')
+const BusinessDay = () => import('../views/BusinessDay.vue')
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -28,6 +30,8 @@ const routes = [
     redirect: { name: 'EventsBusiness' },
     children: [
       { path: 'business', name: 'EventsBusiness', component: EventsBusiness },
+      { path: 'gsmac', name: 'GSMAC', component: GSMAC },
+      { path: 'business-day', name: 'BusinessDay', component: BusinessDay },
       { path: 'sociale', name: 'EventsSocial', component: EventsSocial },
     ],
   },
