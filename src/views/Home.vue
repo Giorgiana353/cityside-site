@@ -56,7 +56,7 @@
         <div class="order-2 lg:order-1" v-inview>
           <span class="text-sm font-semibold tracking-wider text-blue-700">NOUTĂȚI</span>
           <h2 class="mt-2 text-3xl lg:text-4xl font-extrabold text-slate-900">Noua carte a lui Sebastian Văduva</h2>
-          <p class="mt-4 text-slate-600">.....</p>
+          <p class="mt-4 text-slate-600">Cum să înveți din experiențele acestora și să te ferești de greșelile lor.</p>
           <div class="mt-6 flex gap-3">
             <a href="https://www.libris.ro/trasaturile-si-tentatiile-oamenilor-de-succes-EVR978-630-6536-31-3--p42309645.html" class="h-11 px-5 rounded-full bg-[#191970] text-white font-semibold inline-flex items-center justify-center hover:opacity-90 transition">Detalii</a>
             <RouterLink to="/academic" class="h-11 px-5 rounded-full border border-slate-300 text-slate-700 font-semibold inline-flex items-center justify-center hover:bg-white transition">Studii academice</RouterLink>
@@ -65,10 +65,10 @@
         <div class="order-1 lg:order-2" v-inview>
           <div class="relative max-w-md mx-auto">
             <div class="rounded-2xl bg-white shadow-2xl p-6 border border-slate-200">
-              <img src="" alt="Coperta carte Sebastian Văduva" class="w-48 mx-auto drop-shadow-lg" />
+              <img src="/imagini/Trasaturile-si-tentatiile-oamenilor-de-succes.png" alt="Coperta carte Sebastian Văduva" class="w-48 mx-auto drop-shadow-lg" />
               <div class="mt-5">
-                <h3 class="text-xl font-bold text-slate-900">Trăsăturile și tentațiile oamenilor de succes <span class="block">....</span></h3>
-                <p class="mt-2 text-sm text-slate-600">Editor/Autor: '''''Sebastian Văduva</p>
+                <h3 class="text-xl font-bold text-slate-900">Trăsăturile și tentațiile oamenilor de succes <span class="block"></span></h3>
+                <p class="mt-2 text-sm text-slate-600">Autor: Sebastian Văduva</p>
               </div>
             </div>
             <div class="absolute -z-10 -bottom-6 -right-6 w-40 h-40 rounded-full bg-blue-200 blur-2xl"></div>
@@ -110,9 +110,9 @@ const activity = [
 ];
 
 const books = [
-  { id: 1, title: 'Business Ethics and Leadership from an Eastern European, Transdisciplinary Context', authors: 'Văduva, Sebastian; Fotea, Ioan S.; Thomas, Andrew R. (Eds.)', publisher: 'Editura Springer', cover: '', link: 'https://link.springer.com/book/10.1007/978-3-319-45186-2' },
-  { id: 2, title: 'The Changing Business Landscape of Romania: Lessons for and from Transition Economies', authors: 'Thomas, Andrew R.; Pop, Nicolae AL.; Bratianu, Constantin (Eds.)', publisher: 'Editura Springer', cover: '', link: 'https://link.springer.com/book/10.1007/978-1-4614-6865-3' },
-  { id: 3, title: 'Entrepreneurship & Innovation in Eastern Europe', authors: 'Sebastian Văduva et al.', publisher: 'Editura Springer', cover: '', link: 'https://link.springer.com/chapter/10.1007/978-3-031-59858-6_5' },
+  { id: 1, title: 'Business Ethics and Leadership from an Eastern European, Transdisciplinary Context', authors: 'Văduva, Sebastian; Fotea, Ioan S.; Thomas, Andrew R. (Eds.)', publisher: 'Editura Springer', cover: 'public/imagini/Business-Ethics-and-Leadership-from-an-Eastern-European.jpg', link: 'https://link.springer.com/book/10.1007/978-3-319-45186-2' },
+  { id: 2, title: 'The Changing Business Landscape of Romania: Lessons for and from Transition Economies', authors: 'Thomas, Andrew R.; Pop, Nicolae AL.; Bratianu, Constantin (Eds.)', publisher: 'Editura Springer', cover: 'public/imagini/The-Changing-Business-Landscape-of-Romania.jpg', link: 'https://link.springer.com/book/10.1007/978-1-4614-6865-3' },
+  { id: 3, title: 'Entrepreneurship & Innovation in Eastern Europe', authors: 'Sebastian Văduva et al.', publisher: 'Editura Springer', cover: 'public/imagini/Coperta-Entrepreneurship.webp', link: 'https://link.springer.com/chapter/10.1007/978-3-031-59858-6_5' },
 ];
 
 const inview = {
